@@ -1,0 +1,598 @@
+/* Imports */
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+/* Variables */
+
+:root {
+  /* Fonts */
+  --main-font: Roboto;
+
+  /* Colors */
+  --red-color: #f80051;
+  --blue-color: #072d7c;
+  --dark-color: #171a21;
+  --bg-primary-light: #eff6f7;
+
+  /* Spacing */
+  --extra-big-spacing: 80px;
+  --big-spacing: 40px;
+  --normal-spacing: 20px;
+  --small-spacing: 10px;
+
+  /* Box Shadow */
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  /* Border Radius */
+  --border-radius: 5px;
+
+  --border-radius-btn-big: 25px;
+  --border-radius-btn-normal: 15px;
+  --border-radius-btn-small: 5px;
+}
+
+/* Reset */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: var(--main-font);
+  color: var(--dark-color);
+  background-color: var(--bg-primary-light);
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Utilities */
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.extra-big-spacing {
+  height: var(--extra-big-spacing);
+}
+
+.big-spacing {
+  height: var(--big-spacing);
+}
+
+.normal-spacing {
+  height: var(--normal-spacing);
+}
+
+.small-spacing {
+  height: var(--small-spacing);
+}
+
+/* HEADER */
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(/assets/img/hero-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 650px;
+  position: relative;
+}
+
+h1{
+  color: var(--bg-primary-light);
+  font-size: 80px;
+}
+
+#title_dec{
+  color: var(--red-color);
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  position: absolute;
+  top: 0px;
+}
+
+#logo{
+  height: 200px;
+  width: 200px;
+}
+
+#logo > img{
+  width: 100%;
+  object-fit: cover;
+}
+
+#pages > ul{
+  display: flex;
+  gap: var(--normal-spacing);
+  font-size: 20px;
+}
+
+#contact{
+  width: 100%;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+#contact > button{
+  border-color: transparent;
+  background-color: var(--blue-color);
+  color: var(--bg-primary-light);
+  height: 50px;
+  width: 90%;
+  font-size: 25px;
+  border-radius: 40px;
+}
+
+/* HEADER */
+
+/* PERSONAL CONSULTING */
+
+#consult{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+#consult_titles > h3{
+  font-size: 20px;
+}
+
+#consult_titles > h2 {
+  font-size: 70px;
+  margin-left: 10px;
+}
+
+#consult_text{
+  text-align: justify;
+}
+
+/* PERSONAL CONSULTING */
+
+/* OUR SERVICES */
+
+#services{
+  text-align: center;
+  margin-top: var(--normal-spacing);
+}
+
+#services_div{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  margin-top: 30px;
+}
+
+#services_div article{
+  width: 250px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#services_div hr{
+  margin: 0px;
+  margin-right: 30px;
+  height: 100%;
+  padding: 0px;
+  opacity: 40%;
+}
+
+#services_div article h3,#services_div article p{
+  text-align: left;
+}
+
+.services_img{
+  height: 200px;
+}
+
+.services_img > img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+#service-1{
+  grid-column: 1;
+}
+
+#service-2 {
+  grid-column: 3;
+}
+
+#service-3 {
+  grid-column: 5;
+}
+
+#service-4 {
+  grid-column: 7;
+}
+
+/* OUR SERVICES */
+
+/* PROFESIONALES (primero pense que eran testimonios)*/
+
+#testimonios{
+  width: 100%;
+  margin-top: var(--extra-big-spacing);
+  display: flex;
+}
+
+#testimonios article{
+  width: 25%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+
+#testimonios article h3{
+  color: var(--bg-primary-light);
+  font-weight: bold;
+}
+
+.testimonios_text{
+  color: var(--bg-primary-light);
+}
+
+.testimonios_text > h4{
+  font-weight: bold;
+}
+
+#testimonio-1{
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/assets/img/nika.jpg);
+  background-size: cover;
+}
+
+#testimonio-2 {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/assets/img/miguel.jpg);
+  background-size: cover;
+}
+
+#testimonio-3 {
+  background: linear-gradient(to top, rgba(0 ,0 ,0 , 0.3), rgba(0,0,0,0.3) ), url(/assets/img/borba.jpg);
+  background-size: 430px;
+  background-position: bottom left;
+}
+
+#testimonio-4 {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/assets/img/liz.jpg);
+  background-size: cover;
+}
+
+/* POFESIONALES */
+
+/* COURSES */
+
+#courses{
+  margin-top: var(--extra-big-spacing);
+}
+
+#courses h5{
+  margin-bottom: var(--small-spacing);
+}
+
+#courses h2{
+  margin-bottom: var(--big-spacing);
+}
+
+#courses_div{
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 10px; */
+  justify-content: space-between;
+  width: 100%;
+}
+
+.course_card{
+  width: 30%;
+  box-shadow: var(--box-shadow);
+  position: relative;
+}
+
+.course_img{
+  width: 100%;
+}
+
+.course_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course_info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.lessons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lessons img{
+  width: 30px;
+}
+
+.students {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.students img {
+  width: 30px;
+}
+
+.courses_text{
+  padding: 10px;
+}
+
+.courses_text > p{
+  margin-bottom: 10px;
+}
+
+.courses_text hr{
+  margin: 15px 0px;
+}
+
+.courses_text h3{
+  margin-bottom: 20px;
+}
+
+.course_disc{
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: var(--red-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--bg-primary-light);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  top: 50%;
+  right: 10px;
+}
+
+.course_disc > p:first-child{
+  text-decoration: line-through;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+/* COURSES */
+
+/* SPONSORS */
+
+#sponsors{
+  background-color: white;
+  padding-top: var(--extra-big-spacing);
+  margin: auto;
+  margin-top: var(--big-spacing);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sponsors_msg{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+#sponsors_left{
+  height: 600px;
+  width: 50%;
+  position: relative;
+}
+
+#sponsors_img{
+  height: 100%;
+}
+
+#sponsors_img img{
+  height: 100%;
+}
+
+#sponsors_img_msg{
+  background-color: var(--dark-color);
+  color: var(--bg-primary-light);
+  font-size: 50px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 45%;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  box-shadow: var(--box-shadow);
+}
+
+#sponsors_rigth{
+  width: 50%;
+  padding: 50px 0px;
+  padding-left: 90px;
+}
+
+#sponsors_rigth h6{
+  font-weight: bold;
+}
+
+#sponsors_rigth h2{
+  margin-bottom: 20px;
+  font-size: 80px;
+}
+
+#sponsors_rigth ul{
+    padding-left: 40px;
+    padding-top: 10px;
+    list-style: disc;
+}
+
+#sponsors_rigth li{
+  padding: 3px 0px;
+}
+
+#button_div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+#button_div button{
+    border-color: transparent;
+    background-color: var(--blue-color);
+    color: var(--bg-primary-light);
+    height: 50px;
+    width: 40%;
+    font-size: 25px;
+    border-radius: 40px;
+}
+
+#sponsors_imgs{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  opacity: 20%;
+  margin: 30px 0px;
+  max-width: 1200px;
+}
+
+/* SPONSORS */
+
+/* TESTIMONIOS */
+
+  #test{
+    margin-top: var(--big-spacing);
+    margin-bottom: var(--normal-spacing);
+    text-align: center;
+  }
+
+  #test_div{
+    display: flex;
+    text-align: left;
+    gap: 10px;
+  }
+
+  .test_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+    background-color: white;
+    padding: 10px;
+  }
+
+  #test > h5, #test > h2{
+    margin-bottom: var(--normal-spacing);
+  }
+/* TESTIMONIOS */
+
+/* FOOTER */
+
+footer{
+  background-color: var(--dark-color);
+    color: var(--bg-primary-light);
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+footer article{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  min-height: 250px;
+}
+
+footer #title h2{
+  font-size: 60px;
+}
+
+footer ul, footer article{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* FOOTER */
