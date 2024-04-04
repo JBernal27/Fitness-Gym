@@ -133,7 +133,7 @@ header{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(/assets/img/hero-image.jpg);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/assets/img/hero-image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 650px;
